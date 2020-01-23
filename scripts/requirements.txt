@@ -1,0 +1,4 @@
+pandas
+papermill
+requests
+jupyter
