@@ -2,3 +2,5 @@ meh_scraper_env/
 *.ipynb_checkpoints
 .ipynb_checkpoints/
 data/*
+.idea/
+

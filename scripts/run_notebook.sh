@@ -3,7 +3,7 @@ cd $path1
 cd ..
 echo "current working directory: "$PWD
 DATE=`date +%d-%m-%y`
-FILENAME=Parse\ Meh\ API_${DATE}.ipynb
+FILENAME=Parse_Meh_API_${DATE}.ipynb
 LOCATION=notebooks/run_notebooks/
 FILEPATH=$LOCATION$FILENAME
 
