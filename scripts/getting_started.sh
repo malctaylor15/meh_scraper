@@ -3,7 +3,8 @@
 python3 -m venv meh_scraper_env
 source meh_scraper_env/bin/activate
 pip install -r scripts/requirements.txt
-
+mkdir notebooks/run_notebooks
+mkdir data
 
 # Optional -- create SQLite3 Databases
 # bash create_db.sh
@@ -13,3 +14,5 @@ pip install -r scripts/requirements.txt
 
 # Run the notebook using papermill
 bash scripts/run_notebook.sh
+58 23 * * * bash /home/pi/meh_scraper/scripts/run_notebook.sh
+
