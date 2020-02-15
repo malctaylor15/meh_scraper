@@ -1,4 +1,5 @@
-pandas
+pandas==0.25.3
 papermill
 requests
 jupyter
+bs4
