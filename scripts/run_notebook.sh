@@ -2,7 +2,7 @@ export path1="$(dirname "$0")"
 cd $path1
 cd ..
 echo "current working directory: "$PWD
-DATE=`date +%d-%m-%y`
+DATE=`date +%m-%d-%y`
 FILENAME=Parse_Meh_API_${DATE}.ipynb
 LOCATION=notebooks/run_notebooks/
 FILEPATH=$LOCATION$FILENAME
