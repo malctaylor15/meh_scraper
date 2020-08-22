@@ -1,8 +1,9 @@
 export path1="$(dirname "$0")"
+# nordvpn connect
 cd $path1
 cd ..
 echo "current working directory: "$PWD
-DATE=`date +%d-%m-%y`
+DATE=`date +%m-%d-%y`
 FILENAME=Parse_Site_${DATE}.ipynb
 LOCATION=notebooks/run_notebooks/
 FILEPATH=$LOCATION$FILENAME
@@ -20,5 +21,6 @@ then
   rm $FILEPATH
 fi
 
+# nordvpn disconnect
 deactivate
 exit 0
