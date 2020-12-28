@@ -9,7 +9,7 @@ LOCATION=notebooks/run_notebooks/
 FILEPATH=$LOCATION$FILENAME
 
 echo $FILEPATH
-source meh_scraper_env/bin/activate
+source /home/malcolm/main/bin/activate
 papermill notebooks/Parse_Site.ipynb $FILEPATH -p db_location data/meh_scraper.db
 # When in QA use QA database
 #papermill notebooks/Parse\ Meh\ API.ipynb $FILEPATH -p db_location data/meh_scraper_qa.db

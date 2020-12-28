@@ -15,6 +15,6 @@ sqlite3 data/meh_scraper.db < create_db.sh
 
 # Run the notebook using papermill
 bash scripts/run_notebook.sh
-58 23 * * * bash /home/pi/meh_scraper/scripts/run_notebook.sh
-53 */3 * * * bash /home/pi/meh_scraper/scripts/run_site_scraper.sh
+58 23 * * * bash /home/pi/meh_scraper/scripts/run_notebook.sh > /home/pi/meh_scraper/logger.log 2&1
+53 */3 * * * bash /home/pi/meh_scraper/scripts/run_site_scraper.sh > /home/pi/meh_scraper/logger.log 2&1
 

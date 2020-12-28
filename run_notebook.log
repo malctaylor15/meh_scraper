@@ -1,0 +1,13 @@
+current working directory: /home/malcolm/meh_scraper
+notebooks/run_notebooks/Parse_Site_12-28-20.ipynb
+Input Notebook:  notebooks/Parse_Site.ipynb
+Output Notebook: notebooks/run_notebooks/Parse_Site_12-28-20.ipynb
+Generating grammar tables from /home/malcolm/main/lib/python3.6/site-packages/blib2to3/Grammar.txt
+Writing grammar tables to /home/malcolm/.cache/black/20.8b1/Grammar3.6.9.final.0.pickle
+Writing failed: [Errno 2] No such file or directory: '/home/malcolm/.cache/black/20.8b1/tmprzmpi9f5'
+Generating grammar tables from /home/malcolm/main/lib/python3.6/site-packages/blib2to3/PatternGrammar.txt
+Writing grammar tables to /home/malcolm/.cache/black/20.8b1/PatternGrammar3.6.9.final.0.pickle
+Writing failed: [Errno 2] No such file or directory: '/home/malcolm/.cache/black/20.8b1/tmpfphuc8qr'
+Executing:   0%|          | 0/38 [00:00<?, ?cell/s]Executing notebook with kernel: python3
+Executing:   3%|▎         | 1/38 [00:04<02:30,  4.07s/cell]Executing:   5%|▌         | 2/38 [00:04<01:44,  2.89s/cell]Executing:   8%|▊         | 3/38 [00:05<01:22,  2.35s/cell]Executing:  13%|█▎        | 5/38 [00:05<00:54,  1.66s/cell]Executing:  18%|█▊        | 7/38 [00:05<00:36,  1.18s/cell]Executing:  21%|██        | 8/38 [00:05<00:25,  1.16cell/s]Executing:  26%|██▋       | 10/38 [00:05<00:17,  1.59cell/s]Executing:  29%|██▉       | 11/38 [00:05<00:12,  2.11cell/s]Executing:  32%|███▏      | 12/38 [00:06<00:10,  2.60cell/s]Executing:  34%|███▍      | 13/38 [00:06<00:07,  3.13cell/s]Executing:  37%|███▋      | 14/38 [00:06<00:06,  3.81cell/s]Executing:  42%|████▏     | 16/38 [00:06<00:04,  4.82cell/s]Executing:  47%|████▋     | 18/38 [00:06<00:03,  5.97cell/s]Executing:  53%|█████▎    | 20/38 [00:06<00:02,  7.01cell/s]Executing:  58%|█████▊    | 22/38 [00:07<00:01,  8.18cell/s]Executing:  63%|██████▎   | 24/38 [00:07<00:01,  8.13cell/s]Executing:  68%|██████▊   | 26/38 [00:07<00:01,  8.33cell/s]Executing:  74%|███████▎  | 28/38 [00:07<00:01,  9.65cell/s]Executing:  79%|███████▉  | 30/38 [00:07<00:00,  9.44cell/s]Executing:  84%|████████▍ | 32/38 [00:08<00:00,  9.35cell/s]Executing:  89%|████████▉ | 34/38 [00:08<00:00,  8.66cell/s]Executing:  92%|█████████▏| 35/38 [00:08<00:00,  8.87cell/s]Executing:  97%|█████████▋| 37/38 [00:08<00:00,  9.47cell/s]Executing: 100%|██████████| 38/38 [00:10<00:00,  3.77cell/s]
+removing notebooks/run_notebooks/Parse_Site_12-28-20.ipynb

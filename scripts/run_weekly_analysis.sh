@@ -1,15 +1,16 @@
 export path1="$(dirname "$0")"
+# nordvpn connect
 cd $path1
 cd ..
 echo "current working directory: "$PWD
 DATE=`date +%m-%d-%y`
-FILENAME=Parse_Meh_API_${DATE}.ipynb
+FILENAME=Meh_Analysis_v1_${DATE}.ipynb
 LOCATION=notebooks/run_notebooks/
 FILEPATH=$LOCATION$FILENAME
 
 echo $FILEPATH
 source /home/malcolm/main/bin/activate
-papermill notebooks/Parse\ Meh\ API.ipynb $FILEPATH -p db_location data/meh_scraper.db
+papermill notebooks/Meh_Analysis_v1.ipynb $FILEPATH 
 # When in QA use QA database
 #papermill notebooks/Parse\ Meh\ API.ipynb $FILEPATH -p db_location data/meh_scraper_qa.db
 
@@ -20,7 +21,6 @@ then
   rm $FILEPATH
 fi
 
+# nordvpn disconnect
 deactivate
 exit 0
-
-# bash /home/malcolm/meh_scraper/scripts/run_notebook.sh > /home/malcolm/meh_scraper/run_notebook.log
