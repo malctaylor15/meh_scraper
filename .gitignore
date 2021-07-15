@@ -3,4 +3,5 @@ meh_scraper_env/
 .ipynb_checkpoints/
 data/*
 .idea/
+notebooks/run_notebooks/
 
