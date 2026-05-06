@@ -4,8 +4,8 @@ python3 -m venv meh_scraper_env
 source meh_scraper_env/bin/activate
 pip install -r scripts/requirements.txt
 mkdir notebooks/run_notebooks
-mkdir data
-sqlite3 data/meh_scraper.db < create_db.sh
+mkdir -p /mnt/volume-nyc3-01/meh_data
+sqlite3 /mnt/volume-nyc3-01/meh_data/meh_scraper.db < scripts/create_db.sh
 
 # Optional -- create SQLite3 Databases
 # bash create_db.sh

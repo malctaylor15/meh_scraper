@@ -1,4 +1,4 @@
--- sqlite3 data/meh_scraper.db
+-- sqlite3 /mnt/volume-nyc3-01/meh_data/meh_scraper.db
 -- sqlite3 data/meh_scraper_qa.db
 
 -- drop table if exists raw_response_backup;
