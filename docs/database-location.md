@@ -42,3 +42,28 @@ MEH_DB_LOCATION=/tmp/meh_scraper_qa.db bash scripts/run_notebook.sh
 | `notebooks/Run_Analysis_Notebooks.ipynb` | Analysis runner uses the mounted-volume database when invoking analysis notebooks. |
 | `notebooks/Backfill Products Table, dedup backup.ipynb` | QA copy source updated to use the mounted-volume database as production input. |
 | `notebooks/run_notebooks/*.ipynb` | Checked-in historical papermill run notebooks updated so their recorded `db_location` values and QA copy examples no longer reference the old local database path. |
+
+## Backups (incremental)
+
+`scripts/aws_backup.sh` (cron, `meh-backup` job) runs `scripts/s3_sync.py push`, which uploads to `s3://do-mt-backups/meh_db_incremental/`:
+
+```text
+manifest.json                              # per table: schema, and per month: rows, sha256, size
+<table>/<table>_<YYYY-MM>.db.gz            # gzipped SQLite file holding that month's rows
+```
+
+- Each push rescans only the newest month already in the manifest and any later months, and uploads only partitions whose content hash changed. `--full` rescans every month.
+- A push refuses to replace a partition with one that has fewer rows (protects the backup from a truncated or restored local DB). Override with `--force`.
+- The full history is ~53 MiB compressed versus ~1.4 GiB for a raw copy. Set `MEH_FULL_SNAPSHOT=1` to also upload a full copy to `meh_db_backups/` as before.
+- The push holds a read lock on the DB while scanning (~30s). Schedule it away from the :15/:45 site-scraper runs.
+
+Restore or build a merged view:
+
+```bash
+python scripts/s3_sync.py status
+python scripts/s3_sync.py pull --out data/meh_restored.db                     # everything
+python scripts/s3_sync.py pull --out data/recent.db --tables products selling_details --since 2026-01
+MEH_DB_LOCATION=data/recent.db bash scripts/run_weekly_analysis.sh
+```
+
+`pull` creates each table from the latest schema in the manifest, so months saved before `products` gained a column come back with NULLs in that column. `--remote <dir>` points either command at a local directory instead of S3 for testing.
