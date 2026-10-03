@@ -3,3 +3,4 @@ papermill
 requests
 jupyter
 bs4
+boto3
